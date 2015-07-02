@@ -138,6 +138,85 @@
 // console.log(vowels('alabama'))
 
 //======================================  8  ==================================================
+// Write a function called 'twins' which takes an array and returns true if every adjacent pair of items in the array is the same.
+// twins(['a', 'a', 'b', 'b', 'c', 'c']) should return true
+// twins(['a', 'a', 'b', 'c', 'd', 'd']) should return false
+// twins(['a', 'a', 'b', 'z']) should return false
+// twins(['a', 'a', undefined]) should return false
+
+
+// var twins = function(array){
+
+// 	var falseArray = []
+
+// 	for (var i = 0; i < array.length; i+=2) {
+
+// 		if (array[i] != array[i+1] || array.length % 2 != 0){
+
+// 		falseArray.push(false)
+
+// 		}
+
+// 	};
+
+// 	// console.log(falseArray)
+
+// 	if (falseArray.length > 0){
+
+// 		return false
+
+// 	}
+
+// 	else {
+
+// 		return true
+// 	}
+// }
+
+// console.log(twins(['a', 'a', 'b', 'b', 'c', 'c']))
+// console.log(twins(['a', 'a', 'b', 'c', 'd', 'd']))
+// console.log(twins(['a', 'a', 'b', 'z']))
+// console.log(twins(['a', 'a', undefined]))
+
+
+//=======================================  9  =========================================================
+// Write a function called 'or' which takes an array of booleans and returns true if any one of them is true. Given an empty array, return false. If you find an item that is true, the function should return true immediately and not continue checking further values.
+// or([false, false, true, false]) should return true
+// or([false, false, false]) should return false
+// or([]) should return false
+
+// var or = function (arr){
+// 	for (var i = 0; i < arr.length; i++) {
+// 		// console.log(arr[i])
+// 		if (arr[i]){
+// 			return true
+// 		}
+		
+// 	}
+// 	 return false
+// }
+
+
+// console.log(or([, false, true, false]))
+// console.log(or([false, false, false]))
+// console.log(or([]))
+
+//====================================  10  ===============================================================
+// Write a function called 'unique' which takes an array of strings, and returns a new array consisting of the unique values (no duplicates).
+// unique(['a', 'b', 'a', 'c', 'd', 'd']) should return ['a', 'b', 'c', 'd']
+// unique(['todd', 'avery', 'maria', 'avery']) should return ['todd', 'avery', 'maria']
+
+var unique = function(array){
+	var newArray = [];
+	array.forEach(function(element){
+		if (newArray.indexOf(element) === -1){
+			newArray.push(element)
+		}
+	});
+	return newArray;
+}
+console.log(unique(['a', 'b', 'c', 'd', 'd']));
+console.log(unique(['todd', 'avery', 'maria', 'avery']))
 
 
 
