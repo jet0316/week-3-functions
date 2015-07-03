@@ -3,64 +3,64 @@
 
 //==============================   1   ======================================
 // takes a single object argument and returns the value of the 'name' property of the given object.
-// var getName = function(person){
+var getName = function(person){
 
-// 	for (i in getName) {
+	for (i in person) {
 
-// 		var hisName = person.name
+		var hisName = person.name
 
-// 		console.log(hisName)
+		console.log(hisName)
 
-// 		return hisName
-// 	}
-// }
+		return hisName
+	}
+}
 
-// getName({
-// 	name   : 'Bob',
-// 	age    : 27,
-// });
+getName({
+	name   : 'Bob',
+	age    : 27,
+});
 
 
 //================================  2  =========================================
 // takes an array of strings and returns the total number of letters in all strings.
 
-// var totalLetters = function (letterCount){
+var totalLetters = function (letterCount){
 
-// 	var total = 0
+	var total = 0
 
-// 	for (var i = 0; i < letterCount.length; i++) {
+	for (var i = 0; i < letterCount.length; i++) {
 
-// 		total += letterCount[i].length
+		total += letterCount[i].length
 
-// 	}
-// 		return total
-// };
+	}
+		return total
+};
 
-// console.log(totalLetters([
-// 	'i',
-// 	'love',
-// 	'javascript',
-// 	'dude',
-// 	'for',
-// 	'sure'
-// ]))
+console.log(totalLetters([
+	'i',
+	'love',
+	'javascript',
+	'dude',
+	'for',
+	'sure'
+]))
 
 //=================================  3  ==========================================
 // Write a function called 'keyValue' which takes two arguments and returns a new object with a key of the first argument and the value of the second argument.
 // keyValue('city', 'Denver') should return Object {city: "Denver"}
 
-// var keyValue = function(place, name){
-// 	for ( i in place ){
+var keyValue = function(place, name){
+	for ( i in place ){
 		
-// 	}
-// 	for (j in name){
+	}
+	for (j in name){
+ 
+	}
+	var done = [i] + ': ' + name.town
+	return done
+}
 
-// 	}
-// 	var done = [i] + ': ' + name.town
-// 	return done
-// }
-
-// console.log(keyValue({city : 'Boulder'}, {town : 'Denver'}))
+console.log(keyValue({city : 'Boulder'}, {town : 'Denver'}))
 
 //==================================  4  =============================================
 
@@ -68,15 +68,15 @@
 // negativeIndex(['a', 'b', 'c', 'd', 'e'], -2) should return 'd'
 // negativeIndex(['jerry', 'sarah', 'sally'], -1) should return 'sally'
 
-// var negativeIndex = function (arr, num){
+var negativeIndex = function (arr, num){
 	
-// 	var finish = arr[arr.length + num]
+	var finish = arr[arr.length + num]
 
-// 	return finish
+	return finish
 	 	
-// }
+}
 
-// console.log(negativeIndex(['a', 'b', 'c', 'd', 'e'], -2))
+console.log(negativeIndex(['a', 'b', 'c', 'd', 'e'], -2))
 
 
 
@@ -85,36 +85,37 @@
 // removeM('family') should return 'faily'
 // removeM('memory') should return 'eory'
 
-// var removeM = function (string){
+var removeM = function (string){
 
-// 	var output = ''
-// 	for (var i = 0; i < string.length; i++) {
-// 		if ( string[i] != 'm') {
-// 	       output += string[i]
-// 		}
-// 	};
-// 	return output
-// }
+	var output = ''
+	for (var i = 0; i < string.length; i++) {
+		if ( string[i] != 'm') {
+	       output += string[i]
+		}
+	};
+	return output
+}
 
-// console.log(removeM('memory'))
+console.log(removeM('memory'))
+console.log(removeM('mommy'))
 
 //==============================  6  =================================================
 // Write a function called 'printObject' which takes a single object argument and console.log's each key-value pair in the format key is value on separate lines.
 // printObject({ a: 10, b: 20, c: 30 })
 
-// var printObject = function(object){
+var printObject = function(object){
 
-// 	for (i in object) {
+	for (i in object) {
 
-// 		var output = i + ' is ' + object[i];
-// 		console.log(output);
+		var output = i + ' is ' + object[i];
+		console.log(output);
 						
-// 	}
+	}
 
-// }
+}
 
-// printObject({ a: 10, b: 20, c: 30 })
-// printObject({ firstName: 'pork', lastName: 'chops' })
+printObject({ a: 10, b: 20, c: 30 })
+printObject({ firstName: 'pork', lastName: 'chops' })
 
 //===========================  7  =====================================================
 // Write a function called 'vowels' which takes a string and returns an array of all the vowels in the string, including duplicates.
@@ -122,20 +123,20 @@
 // vowels('What evil odd ducks!') should return ['a', 'e', 'i', 'o', 'u']
 
 
-// var vowels = function (string){
+var vowels = function (string){
 
-// 	var output = []
-// 	for (var i = 0; i < string.length; i++) {
-// 		if ( string[i] === 'a' || string[i] === 'e' || string[i] === 'i' || string[i] === 'o' || string[i] === 'u') {
-// 	       output.push(string[i])
-// 		}
-// 	};
-// 	return output
-// }
+	var output = []
+	for (var i = 0; i < string.length; i++) {
+		if ( string[i] === 'a' || string[i] === 'e' || string[i] === 'i' || string[i] === 'o' || string[i] === 'u') {
+	       output.push(string[i])
+		}
+	};
+	return output
+}
 
 
-// console.log(vowels('What evil odd ducks!'))
-// console.log(vowels('alabama'))
+console.log(vowels('What evil odd ducks!'))
+console.log(vowels('alabama'))
 
 //======================================  8  ==================================================
 // Write a function called 'twins' which takes an array and returns true if every adjacent pair of items in the array is the same.
@@ -145,38 +146,38 @@
 // twins(['a', 'a', undefined]) should return false
 
 
-// var twins = function(array){
+var twins = function(array){
 
-// 	var falseArray = []
+	var falseArray = []
 
-// 	for (var i = 0; i < array.length; i+=2) {
+	for (var i = 0; i < array.length; i+=2) {
 
-// 		if (array[i] != array[i+1] || array.length % 2 != 0){
+		if (array[i] != array[i+1] || array.length % 2 != 0){
 
-// 		falseArray.push(false)
+		falseArray.push(false)
 
-// 		}
+		}
 
-// 	};
+	};
 
-// 	// console.log(falseArray)
+	// console.log(falseArray)
 
-// 	if (falseArray.length > 0){
+	if (falseArray.length > 0){
 
-// 		return false
+		return false
 
-// 	}
+	}
 
-// 	else {
+	else {
 
-// 		return true
-// 	}
-// }
+		return true
+	}
+}
 
-// console.log(twins(['a', 'a', 'b', 'b', 'c', 'c']))
-// console.log(twins(['a', 'a', 'b', 'c', 'd', 'd']))
-// console.log(twins(['a', 'a', 'b', 'z']))
-// console.log(twins(['a', 'a', undefined]))
+console.log(twins(['a', 'a', 'b', 'b', 'c', 'c']))
+console.log(twins(['a', 'a', 'b', 'c', 'd', 'd']))
+console.log(twins(['a', 'a', 'b', 'z']))
+console.log(twins(['a', 'a', undefined]))
 
 
 //=======================================  9  =========================================================
@@ -185,21 +186,21 @@
 // or([false, false, false]) should return false
 // or([]) should return false
 
-// var or = function (arr){
-// 	for (var i = 0; i < arr.length; i++) {
-// 		// console.log(arr[i])
-// 		if (arr[i]){
-// 			return true
-// 		}
+var or = function (arr){
+	for (var i = 0; i < arr.length; i++) {
+		// console.log(arr[i])
+		if (arr[i]){
+			return true
+		}
 		
-// 	}
-// 	 return false
-// }
+	}
+	 return false
+}
 
 
-// console.log(or([, false, true, false]))
-// console.log(or([false, false, false]))
-// console.log(or([]))
+console.log(or([, false, true, false]))
+console.log(or([false, false, false]))
+console.log(or([]))
 
 //====================================  10  ===============================================================
 // Write a function called 'unique' which takes an array of strings, and returns a new array consisting of the unique values (no duplicates).
